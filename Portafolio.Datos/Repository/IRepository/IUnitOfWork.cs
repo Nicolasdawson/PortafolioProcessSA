@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Portafolio.Datos.Repository.IRepository
+{
+    public interface IUnitOfWork : IDisposable
+    {
+        ISP_Call SP_Call { get; }
+
+        ITipoFlujoRepository TipoFlujo { get; }
+
+        void Save();
+    }
+}
