@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portafolio.DataAccess.Repository.IRepository;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,8 @@ namespace Portafolio.Datos.Repository.IRepository
         ISP_Call SP_Call { get; }
 
         ITipoFlujoRepository TipoFlujo { get; }
+
+        IUnidadInternaRepository UnidadInterna { get; }
 
         void Save();
     }

@@ -442,3 +442,5 @@ C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\bin\Debug\netcoreapp3
 C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\obj\Debug\netcoreapp3.1\Portafolio.csproj.CoreCompileInputs.cache
 C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\obj\Debug\netcoreapp3.1\Portafolio.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\obj\Debug\netcoreapp3.1\Portafolio.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\UnidadInterna\Index.cshtml.g.cs
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\UnidadInterna\Upsert.cshtml.g.cs

@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Portafolio.Datos.Repository.IRepository;
 using Portafolio.Modelos;
 
-namespace BulkyBook.Areas.Admin.Controllers
+namespace Portafolio.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TipoFlujoController : Controller
+    public class UnidadInternaController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public TipoFlujoController(IUnitOfWork unitOfWork)
+        public UnidadInternaController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -25,41 +25,41 @@ namespace BulkyBook.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            TipoFlujo tipoFlujo = new TipoFlujo();
+            UnidadInterna unidadInterna = new UnidadInterna();
             if (id == null)
             {
                 //this is for create
-                return View(tipoFlujo);
+                return View(unidadInterna);
             }
             //this is for edit
-            tipoFlujo = _unitOfWork.TipoFlujo.Get(id.GetValueOrDefault());
-            if (tipoFlujo == null)
+            unidadInterna = _unitOfWork.UnidadInterna.Get(id.GetValueOrDefault());
+            if (unidadInterna == null)
             {
                 return NotFound();
             }
-            return View(tipoFlujo);
+            return View(unidadInterna);
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(TipoFlujo tipoFlujo)
+        public IActionResult Upsert(UnidadInterna unidadInterna)
         {
             if (ModelState.IsValid)
             {
-                if (tipoFlujo.Id == 0)
+                if (unidadInterna.Id == 0)
                 {
-                    _unitOfWork.TipoFlujo.Add(tipoFlujo);
+                    _unitOfWork.UnidadInterna.Add(unidadInterna);
                     
                 }
                 else
                 {
-                    _unitOfWork.TipoFlujo.Update(tipoFlujo);
+                    _unitOfWork.UnidadInterna.Update(unidadInterna);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(tipoFlujo);
+            return View(unidadInterna);
         }
 
 
@@ -68,19 +68,19 @@ namespace BulkyBook.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.TipoFlujo.GetAll();
+            var allObj = _unitOfWork.UnidadInterna.GetAll();
             return Json(new { data = allObj });
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb = _unitOfWork.TipoFlujo.Get(id);
+            var objFromDb = _unitOfWork.UnidadInterna.Get(id);
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error en el eliminación" });
             }
-            _unitOfWork.TipoFlujo.Remove(objFromDb);
+            _unitOfWork.UnidadInterna.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Eliminación exitosa" });
 

@@ -1,4 +1,6 @@
-﻿using Portafolio.Datos.Data;
+﻿using Portafolio.DataAccess.Repository;
+using Portafolio.DataAccess.Repository.IRepository;
+using Portafolio.Datos.Data;
 using Portafolio.Datos.Repository.IRepository;
 using Portafolio.Modelos;
 using System;
@@ -16,11 +18,14 @@ namespace Portafolio.Datos.Repository
             _db = db;
             TipoFlujo = new TipoFlujoRepository(_db);
             SP_Call = new SP_Call(_db);
+            UnidadInterna = new UnidadInternaRepository(_db);
         }
 
         public ISP_Call SP_Call { get; private set; }
 
         public ITipoFlujoRepository TipoFlujo { get; private set; }
+
+        public IUnidadInternaRepository UnidadInterna { get; private set; }
 
         public void Dispose()
         {

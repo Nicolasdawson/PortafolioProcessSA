@@ -8,19 +8,19 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#tblData').DataTable({
         "ajax": {
-            "url": "/Admin/TipoFlujo/GetAll"
+            "url": "/Admin/UnidadInterna/GetAll"
         },
         "columns": [
-            { "data": "nom_tipo_flujo", "width": "60%" },
+            { "data": "des_unidad", "width": "60%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `
                             <div class="text-center">
-                                <a href="/Admin/TipoFlujo/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
+                                <a href="/Admin/UnidadInterna/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
                                     <i class="fas fa-edit"></i> 
                                 </a>
-                                <a onclick=Delete("/Admin/TipoFlujo/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
+                                <a onclick=Delete("/Admin/UnidadInterna/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
                                     <i class="fas fa-trash-alt"></i> 
                                 </a>
                             </div>
@@ -33,7 +33,7 @@ function loadDataTable() {
 
 function Delete(url) {
     swal({
-        title: "¿Estás seguro que quieres elinar este tipo de flujo?",
+        title: "¿Estás seguro de que quieres eliminar esta unidad interna?",
         text: "¡No vas a poder recuperar estos datos!",
         icon: "warning",
         buttons: true,

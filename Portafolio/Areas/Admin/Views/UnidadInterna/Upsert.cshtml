@@ -1,8 +1,8 @@
-﻿@model Portafolio.Modelos.TipoFlujo
+﻿@model Portafolio.Modelos.UnidadInterna
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var title = "Crear tipo de flujo";
+    var title = "Crear unidad interna";
 }
 
 
@@ -12,7 +12,7 @@
         @if (Model.Id != 0)
         {
             //edit
-            title = "Editar tipo flujo";
+            title = "Editar unidad interna";
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
@@ -20,11 +20,11 @@
         <div class="col-8 pt-4">
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Nom_tipo_flujo"></label>
+                    <label asp-for="Des_unidad"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Nom_tipo_flujo" class="form-control" />
-                    <span asp-validation-for="Nom_tipo_flujo" class="text-danger"></span>
+                    <input asp-for="Des_unidad" class="form-control" />
+                    <span asp-validation-for="Des_unidad" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row">
