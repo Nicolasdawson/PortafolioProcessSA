@@ -111,7 +111,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             [HttpGet]
                     public IActionResult GetAll()
                     {
-                        var allObj = _unitOfWork.FlujoTarea.GetAll(includeProperties: "TipoFlujo");
+                        var allObj = _unitOfWork.FlujoTarea.GetAll(includeProperties:"TipoFlujo");
                         return Json(new { data = allObj });
                     }
 

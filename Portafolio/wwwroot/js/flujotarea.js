@@ -14,7 +14,7 @@ function loadDataTable() {
             { "data": "nom_flujo", "width": "15%" },
             { "data": "des_flujo", "width": "15%" },
             { "data": "progreso", "width": "15%" },
-            { "data": "tipoflujo.nom_tipo_flujo", "width": "15%" },
+            { "data": "tipoFlujo.nom_tipo_flujo", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
