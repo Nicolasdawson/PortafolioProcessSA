@@ -7,6 +7,6 @@ namespace Portafolio.Datos.Repository.IRepository
 {
     public interface ITipoFlujoRepository : IRepository<TipoFlujo>
     {
-        void Update(TipoFlujo tipoflujo);
+        void Update(TipoFlujo tipoFlujo);
     }
 }

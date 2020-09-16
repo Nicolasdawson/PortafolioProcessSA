@@ -17,6 +17,8 @@ namespace Portafolio.Datos.Data
         public DbSet<TipoFlujo> Tipoflujos { get; set; }
 
         public DbSet<UnidadInterna> UnidadInternas { get; set; }
+
+        public DbSet<FlujoTarea> FlujoTareas { get; set; }
     }
 
 

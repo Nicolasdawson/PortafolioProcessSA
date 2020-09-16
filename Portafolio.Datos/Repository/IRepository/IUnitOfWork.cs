@@ -13,6 +13,8 @@ namespace Portafolio.Datos.Repository.IRepository
 
         IUnidadInternaRepository UnidadInterna { get; }
 
+        IFlujoTareaRepository FlujoTarea { get; }
+
         void Save();
     }
 }

@@ -19,6 +19,7 @@ namespace Portafolio.Datos.Repository
             TipoFlujo = new TipoFlujoRepository(_db);
             SP_Call = new SP_Call(_db);
             UnidadInterna = new UnidadInternaRepository(_db);
+            FlujoTarea = new FlujoTareaRepository(_db);
         }
 
         public ISP_Call SP_Call { get; private set; }
@@ -27,6 +28,7 @@ namespace Portafolio.Datos.Repository
 
         public IUnidadInternaRepository UnidadInterna { get; private set; }
 
+        public IFlujoTareaRepository FlujoTarea { get; private set; }
         public void Dispose()
         {
             _db.Dispose();

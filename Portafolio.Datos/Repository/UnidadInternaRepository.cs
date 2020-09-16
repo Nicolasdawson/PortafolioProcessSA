@@ -1,13 +1,13 @@
 ﻿using Portafolio.DataAccess.Repository.IRepository;
 using Portafolio.Datos.Data;
-using Portafolio.Datos.Repository;
+using Portafolio.Datos.Repository.IRepository;
 using Portafolio.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Portafolio.DataAccess.Repository
+namespace Portafolio.Datos.Repository
 {
     public class UnidadInternaRepository : Repository<UnidadInterna>, IUnidadInternaRepository
     {
